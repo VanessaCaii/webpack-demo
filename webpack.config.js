@@ -13,9 +13,12 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist')     
     },
     module: {
-        rules: [{
+        rules: [
+            ...base.module.rules,
+            {
             test: /\.css$/i,
             use: ["style-loader", "css-loader"],
-            }],
+            }
+        ],
     },
 };

@@ -16,7 +16,9 @@ module.exports = {
         }), 
     ],
     module: {
-        rules: [{
+        rules: [
+            ...base.module.rules,
+            {
             test: /\.css$/i,
             use: [
                 MiniCssExtractPlugin.loader, "css-loader"
