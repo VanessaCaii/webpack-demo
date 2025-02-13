@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && npx webpack",
+    "start": "webpack-dev-server",
+    "build": "rm -rf dist && npx webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "5",
+    "css-loader": "3",
     "dart-sass": "^1.23.7",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
@@ -24,7 +25,7 @@
     "stylus-loader": "^3.0.2",
     "webpack": "4",
     "webpack-cli": "3",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "3.9.0"
   },
   "dependencies": {
     "http": "^0.0.1-security",
